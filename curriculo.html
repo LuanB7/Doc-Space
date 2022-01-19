@@ -127,9 +127,9 @@
         document.body.innerHTML = janPrintar;
         window.print();
 
-        
-
-        document.body.innerHTML = conteudoOriginal;
+        setInterval(function(){
+            document.body.innerHTML = conteudoOriginal;
+        }, 1000)
         
     }
     
