@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de docs testes</title>
+</head>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        box-sizing: border-box;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+    }
+
+    .printar {
+        
+    }
+
+    .dentro-printar {
+        margin: 50px;
+    }
+
+    .dentro-printar h1 {
+        margin-bottom: 18px;
+    }
+
+    .gerar-btn {
+        margin-left: 50px;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+
+        background-color: rgb(0, 140, 255);
+        font-size: 18px;
+     
+        color: white;
+
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    
+
+
+
+
+    /*FORMULÁRIO*/
+
+    .formulario {
+        margin: 50px;
+    }
+
+    .formulario input, .formulario textarea {
+        border: none;
+        font-size: 18px;
+
+        background-color: rgba(0, 140, 255, 0.08);
+
+        outline: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 10px;
+
+        width: calc(100% - 25px);
+    }
+
+
+
+</style>
+
+<body>
+
+    <div class="formulario">
+        <span>Título</span>
+        <input type="text" id="tituloIpt" onkeyup="salvar()">
+        <br>
+        <span>Conteúdo</span>
+        <textarea name="" id="conteudoIpt" cols="30" rows="10" onkeyup="salvar()"></textarea>
+        <br>
+ 
+    </div>
+
+    <div class="printar" id="printar">
+        <div class="dentro-printar">
+            <h1 id="dp-titulo">Teste</h1>
+            <p id="dp-conteudo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident magnam nam eum quae possimus ipsam? Necessitatibus voluptatum reprehenderit soluta consequatur saepe dolor fugit nulla! In, vero! Deserunt molestias ipsa reiciendis!</p>
+        </div>
+    </div>
+
+    <button onclick="printar()" class="gerar-btn">Gerar PDF</button>
+    
+</body>
+
+<script>
+
+    //form 
+    function salvar() {
+        var titulo = document.getElementById('tituloIpt').value;
+        var conteudo = document.getElementById('conteudoIpt').value
+
+        var dpTitulo = document.getElementById('dp-titulo');
+        var dpConteudo = document.getElementById('dp-conteudo');
+
+        dpTitulo.innerHTML = titulo;
+        dpConteudo.innerHTML = conteudo;
+    }
+
+
+
+    //printar
+    
+    var conteudoOriginal = document.body.innerHTML;
+
+    var voltarBtn = document.getElementById('voltar-btn');
+
+    function printar() {
+        var janPrintar = document.getElementById('printar').innerHTML;
+        
+        document.body.innerHTML = janPrintar;
+        window.print();
+
+        alert('Clique em ok para retornar.');
+
+        document.body.innerHTML = conteudoOriginal;
+        
+    }
+    
+</script>
+
+</html>
