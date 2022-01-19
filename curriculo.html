@@ -209,8 +209,9 @@
         var janPrintar = document.getElementById('printar').innerHTML;
         document.body.innerHTML = janPrintar;
         window.print()
-        location.reload();
-
+        setTimeout(function() {
+            location.reload();
+        }, 1000) 
     }
 
     
