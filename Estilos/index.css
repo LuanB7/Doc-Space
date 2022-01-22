@@ -36,6 +36,7 @@
     transition: 0.3s;
 }
 
+
 .s1-opcao i {
     font-size: 50px;
     display: flex;
@@ -94,6 +95,7 @@
 
     .s1-opcao{
         width: calc(100% - 60px);
+        margin-left: 0;
     }
 
     .s1-opcao-nome-text {
