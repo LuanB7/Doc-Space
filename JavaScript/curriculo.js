@@ -58,9 +58,9 @@
         var janPrintar = document.getElementById('printar').innerHTML;
         document.body.innerHTML = janPrintar;
         window.print()
-        setTimeout(function() {
+        /*setTimeout(function() {
             location.reload();
-        }, 1000) 
+        }, 1000) */
         
 
     }
