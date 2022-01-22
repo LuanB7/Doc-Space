@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.header-logo-box {
+    height: 80px;
+    display: flex;
+    
+    align-items: center;
+}
+
+
+
+.gerar-btn {
+    margin-left: 50px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+
+    background-color: rgb(0, 140, 255);
+    font-size: 18px;
+ 
+    color: white;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*FORMULÁRIO*/
+
+.formulario {
+    
+    
+}
+
+.formulario input, .formulario textarea {
+    border: none;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    background-color: rgba(0, 140, 255, 0.08);
+
+    outline: none;
+    border-radius: 5px;
+    
+    padding: 20px;
+
+    width: calc(100% - 40px);
+    transition: 0.3s;
+    margin-bottom: 30px;
+
+    color: rgba(0, 10, 15, 0.9);
+   
+}
+    .formulario input:focus, .formulario textarea:focus {
+        box-shadow: inset 0 0 0 1px rgb(0, 119, 255);
+        
+    }
+
+/*Grupos*/
+.form-grupo-de-2 {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.ipt-box {
+    width: calc(50% - 20px);
+}
+
+.ipt-nome {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.h1-criar-curriculo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.p-lembre-se-topo {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 80px;
+    color: rgba(0, 0, 0, 0.7);
+}
+    .p-lembre-se-topo i {
+        color: rgb(0, 140, 255);
+        margin-right: 10px;
+
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+        min-height: 35px;
+        background-color: rgba(0, 140, 255, 0.185);
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+
+/*Esperiência área*/
+
+.experiencia-box, .experiencia-conteudo {
+    width: 100%;
+}
+
+.caixa-de-experiencia, .caixa-de-graduacao {
+    width: calc(50% - 75px);
+    min-height: 70px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 2px rgba(51, 81, 105, 0.2);
+    margin-bottom: 30px;
+    -webkit-print-color-adjust: exact;
+
+    padding: 30px;
+    padding-bottom: 0;
+    transition: 0.3s;
+
+    position: relative;
+}
+
+.caixa-de-experiencia textarea {
+    resize: none;
+    height: 100px;
+}
+
+.caixa-de-experiencia-remover-botao, .caixa-de-graduacao-remover-botao {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    font-size: 16px;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(184, 0, 0, 0.9);
+    background-color: rgba(184, 0, 0, 0.15);
+    border-radius: 5px;
+    
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    margin-left: 20px;
+
+
+}
+    .caixa-de-experiencia i {
+        margin-right: 7px;
+    }
+    .caixa-de-experiencia-remover-botao:hover {
+        background-color: rgba(184, 0, 0, 0.2);
+    }
+
+/*Adcionar exp/grad botao*/
+.caixa-de-experiencia-adcionar-botao, .caixa-de-graduacao-adcionar-botao {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    font-size: 16px;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(0, 140, 255, 0.9);
+    background-color: rgba(0, 140, 255, 0.185);
+    border-radius: 5px;
+    
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    margin-left: 20px;
+
+
+}
+    .caixa-de-experiencia i, .caixa-de-graduacao i {
+        margin-right: 7px;
+    }
+    .caixa-de-experiencia-adcionar-botao:hover, .caixa-de-graduacao-adcionar-botao:hover {
+        background-color: rgba(0, 140, 255, 0.25);
+    }
+
+.caixa-de-experiencia h3, .caixa-de-graduacao h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    
+}
+
+.nivel-escolar-select {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    background-color: rgba(0, 140, 255, 0.08);
+    color: rgb(0, 119, 255);
+    box-shadow: inset 0 0 0 1px rgb(0, 140, 255);
+    padding: 15px 30px;
+    margin-bottom: 12px;
+    border-radius: 5px
+}
+
+
+
+/*Experiência printada e Graduação Printada*/
+
+.experiencia-printada, .graduacao-printada {
+    width: calc(70% - 60px);
+   
+    background-color: rgba(0, 140, 255, 0.08);
+    margin-bottom: 30px;
+    -webkit-print-color-adjust: exact;
+
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 1px rgb(0, 140, 255);
+
+}
+
+    .experiencia-printada h2, .graduacao-printada h2 {
+        color: rgb(0, 140, 255);
+        font-size: 20px;
+        margin-bottom: 20px;
+        
+    }
+    .experiencia-printada p, .graduacao-printada p {
+        font-size: 18px;
+        margin-bottom: 9px;
+    }
+
+    .experiencia-printada-o-que-fazia {
+        color: rgba(40, 75, 104, 0.7);
+    }
+
+    .caixa-de-experiencia-remover-botao, .caixa-de-graduacao-remover-botao  {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .caixa-de-experiencia-remover-botao i, .caixa-de-graduacao-remover-botao i {
+        margin-right: 7px;
+    }
+
+
+/*PRINTAR FINAL*/
+
+    .printar {
+        height: 29.7cm;
+        width: 21cm;
+        box-shadow: 0px 0px 15px rgba(0, 31, 43, 0.267);
+    }
+
+    .dentro-printar {
+       margin: 0;
+       font-size: 12px;
+       font-family: Arial, Helvetica, sans-serif;
+       height: 100%;
+       position: relative;
+    }
+
+    .dentro-printar div {
+        -webkit-print-color-adjust: exact;
+    }
+
+    .printar-header {
+        width: 100%;
+        background-color: rgb(2, 112, 155);
+        color: white;
+        padding-top: 0.5cm;
+        padding-bottom: 0.5cm;
+       
+    }
+
+    .printar-header h1, .printar-header h2 {
+        margin-left: 0.5cm;
+    }
+        .printar-header h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .printar-header h2 {
+            margin-top: 7px;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    
+    .printar-main {
+        display: flex;
+        width: 100%;
+        height: calc(100% - 97.78px);
+        color: rgba(0, 0, 0, 0.7);
+
+    }
+        .printar-main h2 {
+            color: rgb(2, 112, 155);
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .printar-main h3 {
+           font-size: 14px;
+           color: rgba(0, 0, 0, 0.7);
+           margin-bottom: 7px;
+           
+        }
+
+        .printar-main p {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .printar-main-espaco-entre-h3cp {
+            height: 14px;
+        }
+
+    .printar-main-esquerda {
+        height: 100%;
+        width: 68%;
+    }
+        .dentro-printar-main-esquerda {
+            margin: 0.5cm;
+        }
+
+    .printar-main-direita {
+        width: 32%;
+        height: 100%;
+        background-color: rgba(0, 31, 56, 0.05);
+    }
+        .dentro-printar-main-direita {
+            margin: 0.5cm;
+        }
+
+
+/*Principais qualificacoes*/
+
+    .printar-main-qualificacoes {
+        margin-bottom: 0.5cm;
+    }
+
+/*Dentro Printar Exp e Printar Grad*/
+
+    .area-exp-printada .experiencia-printada, .area-grad-printada .graduacao-printada {
+       font-size: 12px;
+       background-color: transparent;
+       padding: 0;
+
+       width: auto;
+       margin-left: 0.5cm;
+
+       box-shadow: none;
+       margin-bottom: 20px;
+    }
+
+        .area-exp-printada .experiencia-printada button, .area-grad-printada .graduacao-printada button {
+            display: none;
+        }
+
+        .area-exp-printada .experiencia-printada-titulo, .area-grad-printada .graduacao-printada-titulo {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.7);
+            margin-bottom: 7px;
+
+            background-color: rgba(0, 31, 56, 0.06);
+            width: fit-content;
+            padding: 7px 10px;
+        }
+
+        .area-exp-printada .experiencia-printada p, .area-grad-printada .graduacao-printada p {
+            font-size: 12px;
+        }
+
+        .printar-main-nivel-escolar {
+            margin-bottom: 12px;
+        }
+
+        .outros-items-coloridos {
+            color: rgb(2, 112, 155);
+        }
+
+
+
+
+
+@media screen and (max-width: 950px) {
+    .form-grupo-de-2 {
+        flex-direction: column;
+        position: relative;
+    }
+
+        .ipt-box {
+            width: 100%;
+        }
+
+    .caixa-de-experiencia, .caixa-de-graduacao {
+        width: calc(100% - 60px);
+    }
+
+    .printar {
+        display: none;
+        width: 100%;
+        
+    }
+
+    .experiencia-printada, .graduacao-printada {
+        width: calc(100% - 60px);
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .h1-criar-curriculo {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .caixa-de-experiencia h3, .caixa-de-graduacao h3 {
+        font-size: 18px;
+    }
+
+        .caixa-de-experiencia-adcionar-botao, .caixa-de-graduacao-adcionar-botao {
+            margin-left: 10px;
+            font-size: 14px;
+        }
+}

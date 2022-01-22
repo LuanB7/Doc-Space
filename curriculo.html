@@ -7,132 +7,27 @@
     <title>Criar Currículo</title>
 
     <link rel="stylesheet" href="Estilos/global.css">
+    <link rel="stylesheet" href="Estilos/curriculo.css">
     <script src="https://kit.fontawesome.com/16f8273a49.js" crossorigin="anonymous"></script>
+    
 </head>
 
-<style>
+<style type="text/css" media="print">
+    @media print
+    {
+       @page {
+         margin-top: 0;
+         margin-bottom: 0;
+       }
 
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        box-sizing: border-box;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        
-    }
-
-    .header-logo-box {
-        height: 80px;
-        display: flex;
-        
-        align-items: center;
-    }
-
-    .printar {
-        -webkit-print-color-adjust: exact;
-    }
-
-    .dentro-printar {
-        margin: 50px;
-    }
-
-    .dentro-printar h1 {
-        margin-bottom: 18px;
-        background-color: red;
-        -webkit-print-color-adjust: exact;
-    }
-
-    .gerar-btn {
-        margin-left: 50px;
-        border: none;
-        outline: none;
-        padding: 10px 20px;
-
-        background-color: rgb(0, 140, 255);
-        font-size: 18px;
-     
-        color: white;
-
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    
-
-
-
-
-    /*FORMULÁRIO*/
-
-    .formulario {
-        
-        
-    }
-
-    .formulario input, .formulario textarea {
-        border: none;
-        font-size: 18px;
-
-        background-color: rgba(0, 140, 255, 0.08);
-
-        outline: none;
-        border-radius: 5px;
-        margin-bottom: 10px;
-        padding: 20px;
-
-        width: calc(100% - 40px);
-       
-    }
-
-    /*Grupos*/
-    .form-grupo-de-2 {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .ipt-box {
-        width: calc(50% - 20px);
-    }
-
-    .ipt-nome {
-        font-size: 18px;
-        color: rgba(0, 0, 0, 0.7);
-        margin-bottom: 10px;
-        display: block;
-    }
-
-    .h1-criar-curriculo {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .p-lembre-se-topo {
-        text-align: center;
-        font-size: 20px;
-        margin-bottom: 80px;
-        color: rgba(0, 0, 0, 0.7);
-    }
-        .p-lembre-se-topo i {
-            color: rgb(0, 140, 255);
-            margin-right: 10px;
-
-            width: 35px;
-            height: 35px;
-            min-width: 35px;
-            min-height: 35px;
-            background-color: rgba(0, 140, 255, 0.185);
-            border-radius: 50%;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
+       .printar-main-direita {
+            height: calc(100% - 102.78px);
+            position: fixed;
+            bottom: 0;
+            right: 0;
         }
-
-
-
-
+       
+    } 
 </style>
 
 <body>
@@ -149,72 +44,229 @@
                 
                 <div class="ipt-box">
                     <span class="ipt-nome">Nome completo</span>
-                    <input type="text" id="tituloIpt" onkeyup="salvar()">
+                    <input type="text" id="nomeIpt" onkeyup="salvar()" required>
                 </div>
             
-                
                 <div class="ipt-box">
                     <span class="ipt-nome">Título da posição (cargo)</span>
-                    <input type="text" id="tituloIpt" onkeyup="salvar()">
+                    <input type="text" id="tituloPosIpt" onkeyup="salvar()" required>
                 </div>
                 
             </div>
+
+
+            <div class="form-grupo-de-2">
+                
+                <div class="ipt-box">
+                    <span class="ipt-nome">E-mail</span>
+                    <input type="email" id="emailIpt" onkeyup="salvar()">
+                </div>
             
-           
-            <br>
-            <span>Conteúdo</span>
-            <textarea name="" id="conteudoIpt" cols="30" rows="10" onkeyup="salvar()"></textarea>
-            <br>
+                <div class="ipt-box">
+                    <span class="ipt-nome">Telefone</span>
+                    <input type="number" id="telefoneIpt" onkeyup="salvar()">
+                </div>
+                
+            </div>
+
+            <span class="ipt-nome">Experiência laboral</span>
+            <div class="esperiencia-box">
+                <div class="experiencia-conteudo" id="experiencia-conteudo">
+                    <div class="caixa-de-experiencia">
+                        <h3>Experiência <button class="caixa-de-experiencia-adcionar-botao" onclick="criarCaixaExp(); salvar()"><i class="fas fa-plus"></i>Adcionar experiência</button></h3>
+                        
+
+                        <div class="form-grupo-de-2">
+                            <div class="ipt-box">
+                                <span class="ipt-nome">Título da posição</span>
+                                <input type="text" id="expTituloPos" required>
+                            </div>
+
+                            <div class="ipt-box">
+                                <span class="ipt-nome">Ano</span>
+                                <input type="number" id="expAno" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-grupo-de-2">
+                
+                            <div class="ipt-box">
+                                <span class="ipt-nome">Empregador</span>
+                                <input type="text" id="expEmpregador" required>
+                            </div>
+                        
+                            
+                            <div class="ipt-box">
+                                <span class="ipt-nome">Cidade</span>
+                                <input type="text" id="expCidade" required>
+                            </div>
+                            
+                        </div>
+
+                        <span class="ipt-nome">O que você fez nessa empresa?</span>
+                        <textarea name="" id="expOQueFazia" cols="30" rows="10"></textarea>
+
+                        
+                    </div>
+
+                    <div class="experiencias-visiveis" id="experiencias-visiveis">
+                        
+
+                    </div>
+
+                </div>
+            </div>
+
+            <span class="ipt-nome">Educação</span>
+
+            <select name="" id="nivel-escolar-select" class="nivel-escolar-select" onmouseover="salvar()" onmouseout="salvar()" required>
+                <option value="ensino-fund-inc">Ensino fundamental incompleto</option>
+                <option value="ensino-fund-comp">Ensino fundamental completo</option>
+
+                <option value="ensino-med-inc">Ensino médio incompleto</option>
+                <option value="ensino-med-comp" selected>Ensino médio completo</option>
+
+                <option value="ensino-sup-inc">Ensino superior incompleto</option>
+                <option value="ensino-sup-comp">Ensino superior completo</option>
+
+            </select>
+
+            <div class="caixa-de-graduacao">
+                <h3>Graduação <button class="caixa-de-graduacao-adcionar-botao" onclick="criarCaixaGraduacao(); salvar()"><i class="fas fa-plus"></i>Adcionar graduação</button></h3>
+                
+
+                <div class="form-grupo-de-2">
+                    <div class="ipt-box">
+                        <span class="ipt-nome">Campo de estudo</span>
+                        <input type="text" id="gradCampoEstudo">
+                    </div>
+
+                    <div class="ipt-box">
+                        <span class="ipt-nome">Graduação</span>
+                        <input type="text" id="gradGraduacao">
+                    </div>
+
+                    
+                </div>
+                
+                <div class="form-grupo-de-2">
+        
+                    <div class="ipt-box">
+                        <span class="ipt-nome">Nome da escola</span>
+                        <input type="text" id="gradEscola">
+                    </div>
+
+                    <div class="ipt-box">
+                        <span class="ipt-nome">Cidade</span>
+                        <input type="text" id="gradCidade">
+                    </div>    
+                    
+                </div>
+
+                <div class="form-grupo-de-2">
+        
+                    <div class="ipt-box">
+                        <span class="ipt-nome">Ano do início</span>
+                        <input type="number" id="gradAnoInicio">
+                    </div>
+                
+                    
+                    <div class="ipt-box">
+                        <span class="ipt-nome">Ano do término</span>
+                        <input type="number" id="gradAnoTermino">
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+
+            <div class="graduacoes-visiveis" id="graduacoes-visiveis">
+
+            </div>
+
+
      
         </div>
     
         <div class="printar" id="printar">
             <div class="dentro-printar">
-                <h1 id="dp-titulo">Teste</h1>
-                <p id="dp-conteudo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident magnam nam eum quae possimus ipsam? Necessitatibus voluptatum reprehenderit soluta consequatur saepe dolor fugit nulla! In, vero! Deserunt molestias ipsa reiciendis!</p>
+                <div class="printar-header">
+                    <h1 id="dp-nome">Luan Lopes Bonholli</h1>
+                    <h2 id="dp-titulo-pos-ipt">Desenvolvedor web</h2>
+                </div>
+
+                <div class="printar-main">
+                    <div class="printar-main-esquerda">
+                        <div class="dentro-printar-main-esquerda">
+                            <p class="printar-main-qualificacoes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus reiciendis deserunt, veritatis maiores vero cumque? Sequi minima et repellat repudiandae quis dignissimos sapiente blanditiis, unde, praesentium ad, delectus esse? Deleniti!</p>
+
+                            <h2>Experiência laboral</h2>
+                            <div class="area-exp-printada" id="area-exp-printada">
+    
+                            </div>
+
+                            <h2>Nível escolar e graduação</h2>
+                            <p id="printar-main-nivel-escolar" class="printar-main-nivel-escolar"><span class="outros-items-coloridos">•</span> Ensino médio completo</sp>
+                            <div class="area-grad-printada" id="area-grad-printada">
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="printar-main-direita">
+                        <div class="dentro-printar-main-direita">
+                            <h2>Informações pessoais</h2>
+                            <h3>Email</h3>
+                            <p id="dp-email">luanlopesbonholli@gmail.com</p>
+                            <div class="printar-main-espaco-entre-h3cp"></div>
+                            <h3>Telefone</h3>
+                            <p id="dp-telefone">(19) 999999999</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
         </div>
+
+        <span style="display: block; margin-top: 50px;">Na aba de impressão?download de PDF, certifique-se de que:
+            <br>
+            A escala esteja em "Padrão";
+            As margens estejam em "Nenhuma";
+            Os cabeçalhos e rodapés estejam desativados.
+        </span>
     
         <button onclick="printar()" class="gerar-btn">Gerar PDF</button>
+
+        <div class="aviso-modal-total-area" id="aviso-modal-total-area">
+            <div class="aviso-modal-background-escuro">
+                
+            </div>
+
+            <div class="aviso-modal" id="aviso-modal">
+                <h1><i class="fas fa-exclamation"></i> Aviso</h1>
+                <p class="aviso-modal-p-conteudo" id="aviso-modal-p-conteudo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatem. Debitis culpa impedit, assumenda neque dignissimos, deleniti quidem eius optio dicta reiciendis porro at sit maxime minima laboriosam mollitia illo?</p>
+                
+                <div class="aviso-modal-botao-area">
+                    <button class="aviso-modal-ok-botao" onclick="fecharAviso()">Ok</button>
+                </div>
+                
+            </div>
+        </div>
+
     </div>
+
+
+    
 
   
     
 </body>
 
-<script>
 
-    //form 
-    function salvar() {
-        var titulo = document.getElementById('tituloIpt').value;
-        var conteudo = document.getElementById('conteudoIpt').value
-
-        var dpTitulo = document.getElementById('dp-titulo');
-        var dpConteudo = document.getElementById('dp-conteudo');
-
-        dpTitulo.innerHTML = titulo;
-        dpConteudo.innerHTML = conteudo;
-    }
-
-
-
-    //printar
-    
-    var conteudoOriginal = document.body.innerHTML;
-
-    var voltarBtn = document.getElementById('voltar-btn');
-
-    function printar() {
-        var janPrintar = document.getElementById('printar').innerHTML;
-        document.body.innerHTML = janPrintar;
-        window.print()
-        setTimeout(function() {
-            location.reload();
-        }, 1000) 
-    }
-
-    
-</script>
+<script src="JavaScript/global.js"></script>
+<script src="JavaScript/curriculo.js"></script>
 
 </html>
