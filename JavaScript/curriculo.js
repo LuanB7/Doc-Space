@@ -25,6 +25,10 @@
         var telefone = document.getElementById('telefoneIpt').value;
         var dpTelefone = document.getElementById('dp-telefone');
         dpTelefone.innerHTML = telefone;
+        //
+        var resumo = document.getElementById('resumoIpt').value;
+        var dpResumo = document.getElementById('dp-resumo');
+        dpResumo.innerHTML = resumo;
 
 
 

@@ -201,4 +201,9 @@ header nav ul li a {
     header nav ul li a {
         display: none;
     }
+
+    .aviso-modal {
+        width: calc(86% - 60px);
+        
+    }
 }

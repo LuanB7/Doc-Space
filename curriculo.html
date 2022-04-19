@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Currículo</title>
-
+    <meta name="description" content="Crie currículos e outros documentos com profissionalidade e facilidade.">
     <link rel="stylesheet" href="Estilos/global.css">
     <link rel="stylesheet" href="Estilos/curriculo.css">
     <script src="https://kit.fontawesome.com/16f8273a49.js" crossorigin="anonymous"></script>
@@ -186,6 +186,22 @@
             </div>
 
 
+            <div class="ipt-box">
+                <span class="ipt-nome">Resumo</span>
+                <textarea id="resumoIpt" onkeyup="salvar()" maxlength="270" placeholder="Em 3-4 sentenças, descreva suas principais qualificações."></textarea>
+                <style>
+                    #resumoIpt {
+                        resize: none;
+                        height: 200px;
+                    }
+
+                    #resumoIpt::placeholder {
+                        color: rgba(5, 42, 56, 0.5);
+                    }
+                </style>
+            </div>
+
+
      
         </div>
     
@@ -199,7 +215,7 @@
                 <div class="printar-main">
                     <div class="printar-main-esquerda">
                         <div class="dentro-printar-main-esquerda">
-                            <p class="printar-main-qualificacoes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus reiciendis deserunt, veritatis maiores vero cumque? Sequi minima et repellat repudiandae quis dignissimos sapiente blanditiis, unde, praesentium ad, delectus esse? Deleniti!</p>
+                            <p class="printar-main-qualificacoes" id="dp-resumo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus reiciendis deserunt, veritatis maiores vero cumque? Sequi minima et repellat repudiandae quis dignissimos sapiente blanditiis, unde, praesentium ad, delectus esse? Deleniti!</p>
 
                             <h2>Experiência laboral</h2>
                             <div class="area-exp-printada" id="area-exp-printada">
@@ -209,6 +225,7 @@
                             <h2>Nível escolar e graduação</h2>
                             <p id="printar-main-nivel-escolar" class="printar-main-nivel-escolar"><span class="outros-items-coloridos">•</span> Ensino médio completo</sp>
                             <div class="area-grad-printada" id="area-grad-printada">
+                                
                                 
                             </div>
                         </div>
@@ -231,14 +248,21 @@
 
         </div>
 
-        <span style="display: block; margin-top: 50px;">Na aba de impressão?download de PDF, certifique-se de que:
+        <span style="display: block; margin-top: 50px; display: none;">Na aba de impressão/download de PDF, certifique-se de que:
             <br>
             A escala esteja em "Padrão";
             As margens estejam em "Nenhuma";
             Os cabeçalhos e rodapés estejam desativados.
         </span>
     
-        <button onclick="printar()" class="gerar-btn">Gerar PDF</button>
+        <button onclick="printar()" class="gerar-btn"><i class="fas fa-check-circle"></i> Gerar PDF</button>
+        <p>
+
+        </p>
+
+
+
+
 
         <div class="aviso-modal-total-area" id="aviso-modal-total-area">
             <div class="aviso-modal-background-escuro">
