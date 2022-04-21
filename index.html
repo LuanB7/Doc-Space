@@ -21,7 +21,7 @@
         <header>
             <nav>
                 <div class="header-logo-box">
-                    <span class="header-logo"><span class="header-logo-cor-primaria"><i class="fas fa-file-alt"></i> Doc</span> Space</span>
+                    <span class="header-logo" onclick="abrirLink('index.html')"><span class="header-logo-cor-primaria"><i class="fas fa-file-alt"></i> Doc</span> Space</span>
                 </div>
     
                 <ul>
@@ -41,13 +41,13 @@
                         <i class="fas fa-angle-right"></i>
                     </a>
 
-                    <a href="#" class="s1-opcao">
+                    <a class="s1-opcao" onclick="aviso('Disponível em breve.')">
                         <i class="fas fa-award"></i>
                         <span class="s1-opcao-nome-text">Criar certificado</span>
                         <i class="fas fa-angle-right"></i>
                     </a>
 
-                    <a href="#" class="s1-opcao">
+                    <a class="s1-opcao" onclick="aviso('Disponível em breve.')">
                         <i class="fas fa-envelope-open-text"></i>
                         <span class="s1-opcao-nome-text">Criar comunicado</span>
                         <i class="fas fa-angle-right"></i>
@@ -64,10 +64,27 @@
                 <ul></ul>
             </div>
         </footer>
+
+
+        <div class="aviso-modal-total-area" id="aviso-modal-total-area">
+            <div class="aviso-modal-background-escuro">
+                
+            </div>
+
+            <div class="aviso-modal" id="aviso-modal">
+                <h1><i class="fas fa-exclamation"></i> Aviso</h1>
+                <p class="aviso-modal-p-conteudo" id="aviso-modal-p-conteudo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatem. Debitis culpa impedit, assumenda neque dignissimos, deleniti quidem eius optio dicta reiciendis porro at sit maxime minima laboriosam mollitia illo?</p>
+                
+                <div class="aviso-modal-botao-area">
+                    <button class="aviso-modal-ok-botao" onclick="fecharAviso()">Ok</button>
+                </div>
+                
+            </div>
+        </div>
     </div>
 
     
-    
+    <script src="JavaScript/global.js"></script>
 </body>
 
 </html>

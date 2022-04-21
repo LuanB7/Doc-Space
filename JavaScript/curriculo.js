@@ -30,6 +30,20 @@
         var dpResumo = document.getElementById('dp-resumo');
         dpResumo.innerHTML = resumo;
 
+        // Cor Principal
+        var corPrincipal = document.getElementById('color-ipt-box-ipt').value;
+        var dpCorPrincipalH2 = document.getElementById('printar-main').querySelectorAll('h2');
+
+        var dpCorPrincipalHeader = document.getElementById('printar-header');
+
+        
+
+        dpCorPrincipalH2.forEach(function(Element) {
+            Element.style.color = corPrincipal;
+        })
+
+        dpCorPrincipalHeader.style.backgroundColor = corPrincipal;
+
 
 
         var experiencia = document.getElementById('experiencias-visiveis').innerHTML;
@@ -41,6 +55,8 @@
         var nivelEscolarSelect = document.getElementById('nivel-escolar-select');
         var nivelEscolar = nivelEscolarSelect.options[nivelEscolarSelect.selectedIndex].text;
         var dpNivelEscolar = document.getElementById('printar-main-nivel-escolar');
+
+
 
    
 

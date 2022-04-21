@@ -17,3 +17,7 @@ function fecharAviso() {
 
     avisoModal.style.marginTop = '-30px';
 }
+
+function abrirLink(url) {
+    window.location.href = url;
+}

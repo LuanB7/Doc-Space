@@ -78,6 +78,8 @@ header nav ul li a {
     font-size: 25px;
     font-weight: bold;
     color: rgb(46, 55, 65);
+
+    cursor: pointer;
 }
 
     .header-logo-cor-primaria {
